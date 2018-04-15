@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>这里时index页面，引用了客户端js脚本</h1>
+    <input type="text" value="" id="question" width = "500" />
+    <input type="button" value="SendToAll" id='btn' />
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        var socket = io();
+
+        document.getElementById('btn').onclick = function(){
+            socket.emit('question',document.getElementById('question').value);
+        }        
+        socket.on('answer',(msg)=>{
+            console.log(msg);//比较简陋，需要在chrome的开发工具的console中查看
+        })
+    </script>
+
+</body>
+</html>

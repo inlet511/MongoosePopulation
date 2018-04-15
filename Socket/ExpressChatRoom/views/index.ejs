@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css">
+        div{
+            width:700px;
+            height:30px;
+            padding:40px;
+            border:1px solid #000;
+            margin:0 auto;
+        }
+        #username{
+            font-size:30px;
+        }
+    </style>
+    <title>登录聊天室</title>
+</head>
+<body>
+    <div>
+        <form action="/check" method="get">
+            输入昵称：
+            <input type="text" id="username" name="username" />
+            <input type="submit" value="进入聊天室" />
+        </form>
+    </div>
+</body>
+</html>
