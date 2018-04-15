@@ -1,18 +1,25 @@
 {
-  "name": "test",
+  "name": "NodeJS-Examples",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inlet511/MongoosePopulation.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inlet511/MongoosePopulation/issues"
+  },
+  "homepage": "https://github.com/inlet511/MongoosePopulation#readme",
   "dependencies": {
-    "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
-    "mongoose": "^5.0.14",
-    "nodemon": "^1.17.3"
+    "mongodb": "^3.0.6",
+    "mongoose": "^5.0.14"
   }
 }
