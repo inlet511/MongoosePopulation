@@ -6,8 +6,7 @@ mongoose.Promise = global.Promise;
 
 var StudentSchema = new Schema({
     name: {
-        type: String,
-        unique: true
+        type: String
     },
     clazzs: [{
         type: Schema.Types.ObjectId,
@@ -15,20 +14,20 @@ var StudentSchema = new Schema({
     }]
 });
 
-var Student = mongoose.model('student', StudentSchema);
+var Student = mongoose.model('Student', StudentSchema);
 
 //定义Schema
 var ClazzSchema = new Schema({
     clazzName: String
 });
 
-var Clazz = mongoose.model('clazz', ClazzSchema);
+var Clazz = mongoose.model('Clazz', ClazzSchema);
 
 
 mongoose.connect('mongodb://localhost/test', function (err) {
     if (err) throw err;
 
-    fillData();
+    // fillData();
 });
 
 
